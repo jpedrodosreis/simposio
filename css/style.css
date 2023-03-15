@@ -1,0 +1,226 @@
+/*geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto";
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Apresentação do Evento*/
+#about-container{
+   flex: 1.4;
+   padding: 2rem 4rem;
+}
+/*frase SaaS Week*/
+#brand{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+/*imagem da nuvem*/
+#brand img{
+    height: 50px;
+    margin-right: 0.6rem;
+}
+/* frase Webinar Exclusivo*/
+#exclusive{
+    text-transform: uppercase;
+    color: #0075ff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+/*frase aprenda a criar um software para gerar renda */
+#about-container h2{
+    font-size: 2.4rem;
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+/*data do evento*/
+#date{
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+/*frase, neste evento você...*/
+#description{
+    max-width: 500px;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+#abount-container h4{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+/*espaço dos palestrantes */
+#user-container{
+    /*um ao lado do outro*/
+    display: flex;
+    /*quando não ouver espaço va para a linha de baixo */
+    flex-wrap: wrap;
+    /*espaçamento internos entre os elementos */
+    gap: 1rem;
+}
+/*espaçamento e borda dos palestrantes*/
+.user-card{
+    border: 2px solid #ccc;
+    padding: 1rem;
+    width: 180px;
+    text-align: center;
+}
+/* imagem dos palestrantes */
+.user-card img{
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+/* nome do palestrante */
+.user-card .user-name{
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+/*profissão do palestrante */
+.user-card .user-role{
+    color: #aaa;
+    font-size: 0.9rem;
+}
+/*Formúlario*/
+/*imagem do formulario e cor de fonte */
+#form-container{
+    flex: 1;
+    background-image:url(../img/pattern.png);
+    background-size: cover;
+    color: #fff;
+}
+/*margem, e alinhamento */
+#form-inner{
+    margin: 3rem;
+    padding: 3rem;
+    border: 2px solid #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*frase, se inscreva */
+#form-inner h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/*frase, não perca a oportunidade ... */
+#form-inner p{
+    margin-bottom: 1rem;
+}
+/*formulario entre o nome e o email */
+#register-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+/*espaço do nome e sobre nome */
+#name-container{
+    display: flex;
+    gap: 0.5rem;
+}
+/*alterando o espaçamento dos campos input*/
+#register-form input{
+    padding: 0.8rem 0.6rem;
+    border: none;
+    border-radius: 3px;
+}
+/* espaço do e-mail*/
+#email{
+    min-width: 100%;
+}
+/*alterando as caracteristicas do input (cadastrar)*/
+/* mesmo que ele não esteja em uma div*/
+#register-form input[type="submit"]{
+    background-color: transparent;
+    color: #fff ;
+    border: 2px solid #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+/* botão quando o mouse passar por cima */
+#register-form input[type="submit"]:hover{
+    background-color: #fff;
+    color: #0075ff;
+}
+/*beneficios */
+#benefits{
+    text-align: left;
+    align-self: start;
+}
+/*titulo dos beneficius */
+#benefits h4{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+/*organizando a posição dos elementos da lista */
+#beneficts ul{
+    list-style-position: inside;
+}
+/*espaçamento entre itens*/
+#benefits li{
+    margin-bottom: 0.5rem;
+}
+/*RESPONSIVO*/
+
+@media (max-width: 450px) {
+    body{
+        flex-direction: column;
+    }
+    #about-container{
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+    /*aumento do titulo */
+    #about-container h2{
+        font-size: 3rem;
+    }
+    /* aumento da tada */
+    #exclusive,
+    #date {
+        font-size: 1.4rem;
+    }
+    /*alterando o texto, aprenda a criar um ... */
+    #description{
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+    #users-container{
+        flex-direction: column;
+    }
+    /*alterando o tamanho das bordas */
+    .user-card{
+        width: 100%;
+        padding: 2rem;
+    }
+    /*alterando o tamanho das imagens*/
+    .user-card img{
+        width: 180px;
+    }
+    /*alterando o tamnanho do nome */
+    .user-card .user-name{
+        font-size: 1.6rem;
+    }
+    /*alterando o tamanho da profissão*/
+    .user-card .user-role{
+        font-size: 1.4rem;
+    }
+    #form-inner{
+        padding: 2rem;
+        margin: 2rem;
+    }
+    /* espaçamento entre nome e sobre nome */
+    #register-form,
+    #name-container{
+        gap: 1rem;
+    }
+}
